@@ -14,16 +14,16 @@ export const SITE_CONFIG = {
   locationLabel: "Goa, India",
 
   // TODO: replace with the real business WhatsApp number before going live
-  whatsappNumber: "919999999999",
+  whatsappNumber: "919767874175",
 
   // Default message shown when someone taps a general "Order on WhatsApp" button
   whatsappDefaultMessage:
     "Hi SHREEYA! I'd like to know more about your jewellery collection.",
 
   instagramHandle: "shreeya.jewellery",
-  instagramUrl: "https://instagram.com/shreeya.jewellery",
+  instagramUrl: "https://instagram.com/shreeya_creation26",
 
-  email: "hello@shreeyajewellery.com",
+  email: "shreeyajewellery83@gmail.com",
 };
 
 /**
