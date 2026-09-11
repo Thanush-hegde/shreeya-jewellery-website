@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-navy-900;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background-color: rgba(200, 162, 77, 0.3);
+    color: #0b1330;
+  }
+}
+
+@layer utilities {
+  .tracking-widest2 {
+    letter-spacing: 0.28em;
+  }
+
+  .container-shreeya {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .gold-divider {
+    @apply mx-auto h-px w-16 bg-gold;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy-900 px-7 py-3 text-sm font-medium tracking-wide text-ivory transition-colors duration-300 hover:bg-navy-700;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3 text-sm font-medium tracking-wide text-navy-950 transition-colors duration-300 hover:bg-gold-400;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy-900/25 px-7 py-3 text-sm font-medium tracking-wide text-navy-900 transition-colors duration-300 hover:border-navy-900 hover:bg-navy-900 hover:text-ivory;
+  }
+}
+
+/* Hide the native cursor only on precise, hover-capable pointers so
+   our custom cursor component can take over. Touch devices keep the
+   default (invisible) touch behaviour untouched. */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  [role="button"] {
+    cursor: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
